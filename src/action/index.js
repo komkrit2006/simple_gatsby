@@ -1,0 +1,1 @@
+export const updateText = data => ({type: 'UPDATE_TEXT',payload: data})

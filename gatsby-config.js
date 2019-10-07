@@ -1,9 +1,22 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    footerText: "Powerby @komkrit",
+    navbar: [
+      { text: "Home", path: "/"},
+      { text: "Bugatti", path: "/Bugatti" },
+      { text: "Ferrari", path: "/Ferrari" },
+      { text: "Lamborghini", path: "/Lamborghini" },
+    ],
+  },
+  plugins: [
+    "gatsby-plugin-styled-components",
+    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+  ],
 }
